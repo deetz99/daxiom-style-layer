@@ -26,9 +26,6 @@ dependencies:
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.3.3)(vue@3.3.13)
-  typescript:
-    specifier: ^5.3.3
-    version: 5.3.3
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -43,6 +40,9 @@ devDependencies:
   nuxt:
     specifier: ^3.9.0
     version: 3.9.0(eslint@8.56.0)(typescript@5.3.3)(vite@5.0.10)
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
