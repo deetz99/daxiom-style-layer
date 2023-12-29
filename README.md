@@ -1,8 +1,15 @@
-# Nuxt Layer Starter
+# Nuxt3 BCROS Styling & Fonts Layer
 
-Create Nuxt extendable layer with this GitHub template.
+This layer was created to enhance DX when creating BCROS applications.
+The BC Gov color theme, BCSans font and BC favicon are configured using tailwindcss.
 
-## Setup
+Please see the tailwind.config.ts file for specifics.
+
+Also included are several common npm packages and nuxt modules. Please see the package.json and nuxt.config.ts for specifics.
+
+Also included are some presets for nuxt/ui components in app.config.ts, such as primary/secondary color, button/input variants etc. Please see file for specifics.
+
+## Setup for Local Dev
 
 Make sure to install the dependencies:
 
@@ -10,64 +17,42 @@ Make sure to install the dependencies:
 pnpm install
 ```
 
-## Working on your theme
-
-Your theme is at the root of this repository, it is exactly like a regular Nuxt project, except you can publish it on NPM.
-
-The `.playground` directory should help you on trying your theme during development.
-
-Running `pnpm dev` will prepare and boot `.playground` directory, which imports your theme itself.
-
-## Distributing your theme
-
-Your Nuxt layer is shaped exactly the same as any other Nuxt project, except you can publish it on NPM.
-
-To do so, you only have to check if `files` in `package.json` are valid, then run:
-
-```bash
-npm publish --access public
-```
-
-Once done, your users will only have to run:
-
-```bash
-npm install --save your-theme
-```
-
-Then add the dependency to their `extends` in `nuxt.config`:
-
-```ts
-defineNuxtConfig({
-  extends: 'your-theme'
-})
-```
-
-## Development Server
-
 Start the development server on http://localhost:3000
 
 ```bash
 pnpm dev
 ```
 
-## Production
+## Distributing Layer
 
-Build the application for production:
+The Nuxt layer is shaped exactly the same as any other Nuxt project, except you can publish it on NPM.
 
-```bash
-pnpm build
-```
+To do so, you only have to check if the `package.json` is valid:
 
-Or statically generate it with:
+- main must be set to `"main": "./nuxt.config.ts"`
+- any dependencies you want included in the layer must be installed in dependencies, NOT devDependencies
+- make sure to update package version
 
-```bash
-pnpm generate
-```
-
-Locally preview production build:
+Then run:
 
 ```bash
-pnpm preview
+npm publish --access public
 ```
 
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+It is not necessary to run `pnpm run build` to successfully publish a layer.
+
+## Using Layer
+
+To install layer:
+
+```bash
+pnpm i -D @dwol/layer-test1
+```
+
+Then add the dependency to the `extends` in `nuxt.config`:
+
+```ts
+defineNuxtConfig({
+  extends: "@dwol/layer-test1",
+});
+```
