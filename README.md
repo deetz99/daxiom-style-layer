@@ -1,6 +1,6 @@
 # Nuxt3 BCROS Styling & Fonts Layer
 
-This layer was created to enhance DX when creating BCROS applications.
+This layer was created to simplify the DX when creating BCROS applications.
 The BC Gov color theme, BCSans font and BC favicon are configured using tailwindcss.
 
 Please see the tailwind.config.ts file for specifics.
@@ -59,7 +59,7 @@ defineNuxtConfig({
 
 ## License
 
-Copyright © 2023 Province of British Columbia
+Copyright © 2024 Province of British Columbia
 
 Licensed under the BSD 3 Clause License, (the "License");
 you may not use this file except in compliance with the License.
