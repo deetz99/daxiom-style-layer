@@ -1,7 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
 const currentDir = dirname(fileURLToPath(import.meta.url));
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
@@ -15,5 +17,10 @@ export default defineNuxtConfig({
   ],
   ui: {
     icons: ["mdi"],
+  },
+  alias: {
+    BCGovFonts: join(currentDir, "./public/fonts/BCSans"),
+    BCGovLogoSmall: join(currentDir, "./public/logos/gov_bc_logo_vert.png"),
+    BCGovLogoLarge: join(currentDir, "./public/logos/gov_bc_logo_horiz.png"),
   },
 });

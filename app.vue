@@ -4,4 +4,6 @@ const { myLayer, ui } = useAppConfig();
 <template>
   test
   <pre> {{ myLayer }}</pre>
+  <img src="/logos/gov_bc_logo_horiz.png" />
+  <img src="BCGovLogoSmall" />
 </template>
