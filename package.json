@@ -1,7 +1,7 @@
 {
-  "name": "@dwol/layer-test1",
+  "name": "@dwol/dax-style-layer",
   "type": "module",
-  "version": "0.2.6",
+  "version": "0.0.1",
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxt dev .playground",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
-    "eslint": "^8.28.0",
+    "eslint": "^8.56.0",
     "nuxt": "^3.9.1",
     "typescript": "^5.3.3"
   },
